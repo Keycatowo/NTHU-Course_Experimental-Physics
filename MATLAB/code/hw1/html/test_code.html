@@ -1,0 +1,716 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Hw1</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-26"><meta name="DC.source" content="test_code.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Hw1</h1><!--introduction--><p>&#21129;&#24344;&#31077; 106022103 2018/11/26</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">9-1-4</a></li><li><a href="#3">10-2-1</a></li><li><a href="#4">11-1-1</a></li><li><a href="#5">14-13</a></li><li><a href="#6">15-16</a></li><li><a href="#7">16-9</a></li></ul></div><p>&#20197;&#19978;&#20998;&#21029;&#28858;&#21508;&#21839;&#38988;&#30340;code</p><p>&#20197;&#19979;&#28858;&#28204;&#35430;&#29992;&#31243;&#24335;&#20027;&#39636;&#65306;</p><pre class="codeinput"><span class="keyword">function</span> []= test_code_hw1()
+    clear <span class="string">all</span>;
+    test_1();
+    test_2();
+    test_3();
+    test_4();
+    test_5();
+    test_6();
+
+<span class="keyword">end</span>
+</pre><h2 id="2">9-1-4</h2><p>&#35531;&#35373;&#35336;&#19968;&#20491;&#20989;&#25976; index2pos.m&#65292;&#20854;&#29992;&#27861;&#22914;&#19979;&#65306; position = index2pos(index); &#20854;&#20013; index &#26159;&#19968;&#20491;&#20803;&#32032;&#28858;&#27491;&#25972;&#25976;&#30340;&#21521;&#37327;&#65292;position &#21063;&#26159;&#27492;&#20989;&#25976;&#30340;&#36664;&#20986;&#30697;&#38499;&#65292; &#20854;&#21015;&#25976;&#28858; index &#20803;&#32032;&#30340;&#26368;&#22823;&#20540;&#65292;&#34892;&#25976;&#21063;&#26159; index &#30340;&#20803;&#32032;&#20491;&#25976;&#65292;&#32780;&#19988;&#30070; index(i) = j &#26178;&#65292; position &#30340;&#31532; i &#34892;&#20013;&#65292;&#21482;&#26377;&#31532; j &#20491;&#20803;&#32032;&#28858; 1&#65292;&#20854;&#39192;&#28858;&#38646;&#12290;</p><p>&#20197;&#19979;&#28858;index2pos&#20989;&#24335;</p><pre class="language-matlab">
+<span class="keyword">function</span> position=index2pos(index)
+<span class="comment">% &#36664;&#20837;&#19968;&#20491;&#19968;&#32173;&#21521;&#37327;</span>
+<span class="comment">% &#36664;&#20986;&#19968;&#20491;&#30697;&#38499;</span>
+<span class="comment">% &#38500;&#20102;&#27599;&#20491;&#19968;&#32173;&#21521;&#37327;&#25152;&#34920;&#31034;&#20301;&#32622;&#28858;1&#20197;&#22806;&#20854;&#20182;&#20803;&#32032;&#20840;&#37096;&#28858;0</span>
+    n=length(index);
+    position=zeros(n);
+    <span class="keyword">for</span> i=1:n
+        position(index(i),i)=1;
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+</pre><p>&#20197;&#19979;&#28858;&#28204;&#35430;&#29992;&#20989;&#24335;</p><pre class="codeinput"><span class="keyword">function</span> []= test_1()
+    fprintf(<span class="string">'Here is the demo for problem&#65306;%s .\n'</span>,<span class="string">'9-1-4'</span>);
+    a=[2 1 3 5];
+    b=[2 7 1 1 5];
+
+    disp(<span class="string">'&#36664;&#20837;&#28858;&#65306;'</span>);
+    disp(a);
+    disp(<span class="string">'&#36664;&#20986;&#28858;&#65306;'</span>);
+    disp(index2pos(a));
+
+    disp(<span class="string">'&#36664;&#20837;&#28858;&#65306;'</span>);
+    disp(b);
+    disp(<span class="string">'&#36664;&#20986;&#28858;&#65306;'</span>);
+    disp(index2pos(b));
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Here is the demo for problem&#65306;9-1-4 .
+&#36664;&#20837;&#28858;&#65306;
+     2     1     3     5
+
+&#36664;&#20986;&#28858;&#65306;
+     0     1     0     0
+     1     0     0     0
+     0     0     1     0
+     0     0     0     0
+     0     0     0     1
+
+&#36664;&#20837;&#28858;&#65306;
+     2     7     1     1     5
+
+&#36664;&#20986;&#28858;&#65306;
+     0     0     1     1     0
+     1     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     1
+     0     0     0     0     0
+     0     1     0     0     0
+
+</pre><h2 id="3">10-2-1</h2><p>Palindrome: &#12300;&#36852;&#25991;&#12301; (Palindrome) &#22312;&#20013;&#25991;&#30070;&#20013;&#26159;&#25351;&#20498;&#27491;&#33879;&#24565; &#21644;&#21453;&#33879;&#24565;&#37117;&#30456;&#21516;&#30340;&#21477;&#23376;&#65292;&#21069;&#24460;&#23565;&#31281;&#65292;&#20363;&#22914;&#12300;&#19978;&#28023;&#33258;&#20358;&#27700;&#20358;&#33258;&#28023;&#19978;&#12301; &#12290;&#22312;&#33521;&#25991;&#30070;&#20013;&#26159;&#25351;&#27491;&#33879;&#30475;&#21644;&#21453;&#33879;&#30475;&#37117;&#30456;&#21516;&#30340;&#21934;&#23383;&#65292;&#20363;&#22914;&#12300; madam &#12301;&#12290;&#35531;&#23531;&#19968;&#20491; MATLAB &#20989;&#25976;&#65292;&#20358;&#27770;&#23450;&#25152;&#32102;&#23450;&#30340;&#23383;&#20018;&#26159;&#21542;&#26159;&#12300;&#36852;&#25991;&#12301;&#12290;</p><p>&#20197;&#19979;&#28858;Palindrome&#22238;&#25991;&#20989;&#24335;</p><pre class="language-matlab">
+<span class="keyword">function</span> is_Palindrome=Palindrome(index)
+<span class="comment">% &#21028;&#26039;&#21028;&#26039;&#20989;&#24335;</span>
+<span class="comment">% &#36664;&#20837;&#19968;&#20491;&#21521;&#37327;</span>
+<span class="comment">% &#24478;&#38957;&#23614;&#20381;&#27425;&#21028;&#26039;&#26159;&#21542;&#30456;&#31561;&#65292;&#33509;&#20854;&#20013;&#26377;&#19968;&#19981;&#30456;&#31561;&#30340;&#21063;&#35222;&#28858;&#19981;&#30456;&#31561;</span>
+    n=length(index);
+    is_Palindrome=<span class="string">'Yes,it is palindrome.'</span>;
+    <span class="keyword">for</span> i=1:n
+        <span class="keyword">if</span> index(i)~=index(n+1-i)
+            is_Palindrome=<span class="string">'Nope,it is not palindrome.'</span>;
+            <span class="keyword">break</span>;
+        <span class="keyword">end</span>
+<span class="comment">%   &#36895;&#24230;&#20778;&#21270;&#65306;&#21487;&#23559;&#21028;&#26039;n&#20491;&#25913;&#28858;&#21028;&#26039;&#21040;&#19968;&#21322;n+1/2&#21363;&#21487;</span>
+<span class="comment">%   &#20294;&#20491;&#25976;&#19981;&#22810;&#24773;&#27841;&#19979;&#24433;&#38911;&#19981;&#22823;</span>
+<span class="keyword">end</span>
+    
+        
+
+</pre><p>&#20197;&#19979;&#28858;&#28204;&#35430;&#29992;&#20989;&#24335;</p><pre class="codeinput"><span class="keyword">function</span> []=test_2()
+    fprintf(<span class="string">'Here is the demo for problem&#65306;%s .\n'</span>,<span class="string">'10-2-1'</span>);
+    a=<span class="string">'madam'</span>;
+    b=<span class="string">'homework'</span>;
+    c=[1 2 3 2 1];
+
+    disp(<span class="string">'&#36664;&#20837;&#28858;&#65306;'</span>);
+    disp(a);
+    disp(<span class="string">'&#36664;&#20986;&#28858;&#65306;'</span>);
+    disp(Palindrome(a));
+
+    disp(<span class="string">'&#36664;&#20837;&#28858;&#65306;'</span>);
+    disp(b);
+    disp(<span class="string">'&#36664;&#20986;&#28858;&#65306;'</span>);
+    disp(Palindrome(b));
+
+    disp(<span class="string">'&#36664;&#20837;&#28858;&#65306;'</span>);
+    disp(c);
+    disp(<span class="string">'&#36664;&#20986;&#28858;&#65306;'</span>);
+    disp(Palindrome(c));
+    <span class="comment">%&#38918;&#20415;&#28204;&#35430;&#19968;&#19979;Cell Arrays &#26159;&#21542;&#21487;&#20197;&#21028;&#26039;</span>
+    d=[a b a];
+    disp(<span class="string">'&#36664;&#20837;&#28858;&#65306;'</span>);
+    disp(d);
+    disp(<span class="string">'&#36664;&#20986;&#28858;&#65306;'</span>);
+    disp(Palindrome(d));
+    <span class="comment">%&#23526;&#38555;&#28204;&#35430;&#20043;&#24460;&#30332;&#29694;&#20006;&#19981;&#26159;&#20197;aba&#20570;&#21028;&#26039;&#65292;&#32780;&#26159;&#21512;&#20341;&#20043;&#24460;&#21028;&#26039;</span>
+    <span class="comment">%&#33509;&#38656;&#35201;&#21028;&#26039;aba&#21487;&#33021;&#38656;&#35201;&#29992;&#37325;&#36617;</span>
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Here is the demo for problem&#65306;10-2-1 .
+&#36664;&#20837;&#28858;&#65306;
+madam
+&#36664;&#20986;&#28858;&#65306;
+Yes,it is palindrome.
+&#36664;&#20837;&#28858;&#65306;
+homework
+&#36664;&#20986;&#28858;&#65306;
+Nope,it is not palindrome.
+&#36664;&#20837;&#28858;&#65306;
+     1     2     3     2     1
+
+&#36664;&#20986;&#28858;&#65306;
+Yes,it is palindrome.
+&#36664;&#20837;&#28858;&#65306;
+madamhomeworkmadam
+&#36664;&#20986;&#28858;&#65306;
+Nope,it is not palindrome.
+</pre><h2 id="4">11-1-1</h2><p>&#35531;&#23531;&#19968;&#20491;&#31777;&#30701;&#30340;&#31243;&#24335;getMdArray.m&#20358;&#24314;&#31435;&#19968;&#20491;3&#32173;&#30697;&#38499;A</p><p>&#20197;&#19979;&#28858;getMdArray&#24314;&#31435;&#30697;&#38499;&#20989;&#24335;</p><pre class="language-matlab">
+<span class="keyword">function</span> [data,years,type,class] = getMdArray()
+<span class="comment">%     &#28961;&#36664;&#20837;</span>
+<span class="comment">%     &#36664;&#20986;&#22235;&#35722;&#25976;[data years  type class]</span>
+<span class="comment">%     data&#28858;&#19968;&#20491;4*3*2&#19977;&#32173;&#25976;&#23383;&#30697;&#38499; &#20381;&#27425;&#23384;&#25918;&#36523;&#20221;/&#24180;&#27425;/&#29677;&#21029;&#30340;&#20154;&#25976;</span>
+<span class="comment">%     years&#28858;&#19968;&#20491;3*1&#21521;&#37327; &#23384;&#25918;&#24180;&#27425;</span>
+<span class="comment">%     type&#28858;&#19968;&#20491;1*4&#21521;&#37327; &#23384;&#25918;&#36523;&#20221;</span>
+<span class="comment">%     class&#28858;1*2&#21521;&#37327; &#23384;&#25918;&#29677;&#21029;&#21517;&#31281;</span>
+    data=[98 94 80 5; 105 97 87 6; 121 110 89 8];
+    data(:,:,2)=[99 98 85 10; 113 101 87 12; 120 115 80 15];
+    years=[{2001},{2002},{2003}];
+    type=[{<span class="string">'&#22823;&#19968;&#26032;&#29983;'</span>},{<span class="string">'&#23416;&#22763;&#30050;&#26989;&#29983;'</span>},{<span class="string">'&#30889;&#22763;&#30050;&#26989;&#29983;'</span>},{<span class="string">'&#21338;&#22763;&#30050;&#26989;&#29983;'</span>}];
+    class=[{<span class="string">'&#36039;&#35338;&#31995;'</span>},{<span class="string">'&#38651;&#27231;&#31995;'</span>}];
+<span class="keyword">end</span>
+
+</pre><p>&#20197;&#19979;&#28858;&#28204;&#35430;&#29992;&#20989;&#24335;</p><pre class="codeinput"><span class="keyword">function</span> []=test_3()
+    fprintf(<span class="string">'Here is the demo for problem&#65306;%s .\n'</span>,<span class="string">'11-1-1'</span>);
+    [data,years,type,class] = getMdArray();
+
+    <span class="keyword">for</span> i=1:2;
+        disp(class(i));
+        <span class="keyword">for</span> j=1:3;
+            fprintf(<span class="string">'\t'</span>);
+            disp(years(j));
+            <span class="keyword">for</span> k=1:4;
+                fprintf(<span class="string">'\t\t'</span>);
+                disp(type(k));
+                fprintf(<span class="string">'\b\b'</span>);
+                disp(data(j,k,i));
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Here is the demo for problem&#65306;11-1-1 .
+    '&#36039;&#35338;&#31995;'
+
+	    [2001]
+
+		    '&#22823;&#19968;&#26032;&#29983;'    98
+
+		    '&#23416;&#22763;&#30050;&#26989;&#29983;'    94
+
+		    '&#30889;&#22763;&#30050;&#26989;&#29983;'    80
+
+		    '&#21338;&#22763;&#30050;&#26989;&#29983;'     5
+
+	    [2002]
+
+		    '&#22823;&#19968;&#26032;&#29983;'   105
+
+		    '&#23416;&#22763;&#30050;&#26989;&#29983;'    97
+
+		    '&#30889;&#22763;&#30050;&#26989;&#29983;'    87
+
+		    '&#21338;&#22763;&#30050;&#26989;&#29983;'     6
+
+	    [2003]
+
+		    '&#22823;&#19968;&#26032;&#29983;'   121
+
+		    '&#23416;&#22763;&#30050;&#26989;&#29983;'   110
+
+		    '&#30889;&#22763;&#30050;&#26989;&#29983;'    89
+
+		    '&#21338;&#22763;&#30050;&#26989;&#29983;'     8
+
+    '&#38651;&#27231;&#31995;'
+
+	    [2001]
+
+		    '&#22823;&#19968;&#26032;&#29983;'    99
+
+		    '&#23416;&#22763;&#30050;&#26989;&#29983;'    98
+
+		    '&#30889;&#22763;&#30050;&#26989;&#29983;'    85
+
+		    '&#21338;&#22763;&#30050;&#26989;&#29983;'    10
+
+	    [2002]
+
+		    '&#22823;&#19968;&#26032;&#29983;'   113
+
+		    '&#23416;&#22763;&#30050;&#26989;&#29983;'   101
+
+		    '&#30889;&#22763;&#30050;&#26989;&#29983;'    87
+
+		    '&#21338;&#22763;&#30050;&#26989;&#29983;'    12
+
+	    [2003]
+
+		    '&#22823;&#19968;&#26032;&#29983;'   120
+
+		    '&#23416;&#22763;&#30050;&#26989;&#29983;'   115
+
+		    '&#30889;&#22763;&#30050;&#26989;&#29983;'    80
+
+		    '&#21338;&#22763;&#30050;&#26989;&#29983;'    15
+
+</pre><h2 id="5">14-13</h2><p>&#35531;&#23531;&#19968;&#20491; MATLAB &#31243;&#24335;&#25214;&#20986;&#26368;&#23567;&#30340; &#27491;&#25972;&#25976; n &#20540;&#65292;&#20351;&#24471; A^(n+1)=A^n &#27492;&#26178;n&#20540;&#28858;&#20309;</p><p>&#20197;&#19979;&#28858;min_value_times&#24314;&#31435;&#30697;&#38499;&#20989;&#24335;</p><pre class="language-matlab">
+<span class="keyword">function</span> n=min_value_times(matrix)
+<span class="comment">%     &#36664;&#20837;&#19968;&#30697;&#38499;matrix</span>
+<span class="comment">%     &#21028;&#26039;&#26368;&#23567;&#27491;&#25972;&#25976;N&#65292;&#20351;&#24471;&#30697;&#38499;&#30340;N&#27425;&#21644;N+1&#27425;&#26041;&#28858;&#30456;&#31561;</span>
+<span class="comment">%     &#36664;&#20986;N</span>
+    matrix_n=matrix;
+    I=zeros(3)+1;
+    <span class="keyword">for</span> i=1:1000;
+        <span class="keyword">if</span> (isequal(matrix^i,matrix^(i+1)))
+            n=i;
+            <span class="keyword">break</span>;
+        <span class="keyword">else</span>
+            matrix_n=matrix_n*matrix;
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">%     &#36895;&#24230;&#20778;&#21270;&#65306;&#27599;&#27425;&#37117;&#35336;&#31639;&#19968;&#27425;n&#27425;&#26041;&#28858;O&#65288;n^2)</span>
+<span class="comment">%     &#21487;&#25913;&#21892;&#25104;&#22810;&#22686;&#38283;&#19968;&#20491;matrix &#20358;&#22238;&#30456;&#20056;&#36991;&#20813;&#37325;&#35079;&#35336;&#31639;</span>
+<span class="comment">%     &#21487;&#25913;&#21892;&#25104;O&#65288;n&#65289;</span>
+<span class="keyword">end</span>
+
+</pre><p>&#20197;&#19979;&#28858;&#28204;&#35430;&#29992;&#20989;&#24335;</p><pre class="codeinput"><span class="keyword">function</span> []=test_4()
+    fprintf(<span class="string">'Here is the demo for problem&#65306;%s .\n'</span>,<span class="string">'14-13'</span>);
+    M=[0.3 0.1 0.2;0.2 0.7 0.4;0.5 0.2 0.4];
+    n=min_value_times(M);
+    disp(<span class="string">'A&#28858;&#65306;'</span>);
+    format <span class="string">bank</span>;
+    disp(M);
+    fprintf(<span class="string">'&#26368;&#23567;&#30340;n&#20540;&#28858;%d.\n&#27492;&#26178;&#30340;A^n&#21644;A^n+1&#28858;\n'</span>,n);
+    format <span class="string">long</span>;
+    disp(M^n);
+    format;
+
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Here is the demo for problem&#65306;14-13 .
+A&#28858;&#65306;
+          0.30          0.10          0.20
+          0.20          0.70          0.40
+          0.50          0.20          0.40
+
+&#26368;&#23567;&#30340;n&#20540;&#28858;102.
+&#27492;&#26178;&#30340;A^n&#21644;A^n+1&#28858;
+   0.163934426229508   0.163934426229508   0.163934426229508
+   0.524590163934424   0.524590163934424   0.524590163934424
+   0.311475409836065   0.311475409836064   0.311475409836065
+
+</pre><h2 id="6">15-16</h2><p>&#25776;&#23531;&#19968;&#20989;&#24335; quadzero01.m&#65292;&#20854;&#36664;&#20986;&#20837;&#30340;&#26684;&#24335;&#22914;&#19979;&#65306;   root = quadzero01(coef) &#20854;&#20013; coef &#26159;&#19968;&#20491; 3x1 &#30340;&#21521;&#37327;&#65292;&#20195;&#34920;&#19968;&#20491;&#19968;&#20803;&#20108;&#27425;&#26041;&#31243;&#24335;&#30340;&#20418;&#25976;&#65288;&#38477;&#20906;&#25490;&#21015;&#65289; &#65292;&#32780; root &#21063;&#26159;&#27492;&#26041;&#31243;&#24335;&#30340;&#26681;&#25152;&#24418;&#25104;&#30340;&#21521;&#37327;&#12290;&#33509; coef(1) &#19981;&#26159;&#38646;&#65292;&#21063; roots &#30340;&#38263;&#24230;&#28858;&#20108;&#12290;&#33509; coef(1) &#26159;&#38646;&#65292;&#21063;&#21487;&#33021;&#26377;&#19968;&#35299;&#65288;root &#30340;&#38263;&#24230;&#28858;&#19968;&#65289;&#25110;&#28961;&#35299; &#65288;root&#28858;&#31354;&#30697;&#38499;&#65289;&#12290;</p><p>&#20197;&#19979;&#28858;quadzero01&#24314;&#31435;&#30697;&#38499;&#20989;&#24335;</p><pre class="language-matlab">
+<span class="keyword">function</span> root = quadzero01(coef)
+<span class="comment">%     &#35299;&#19968;&#20803;&#20108;&#27425;&#26041;&#31243;&#24335;&#30340;&#35299;</span>
+<span class="comment">%     &#36664;&#20837;&#28858;&#19968;1*3&#21521;&#37327; &#20998;&#21029;&#34920;&#31034;&#20108;&#27425;&#12289;&#19968;&#27425;&#12289;&#21644;&#24120;&#25976;&#38917;&#30340;&#20418;&#25976;</span>
+<span class="comment">%     &#33509;&#28961;&#35299; &#36664;&#20986;&#31354;&#21521;&#37327;</span>
+<span class="comment">%     &#33509;&#38750;&#20108;&#27425;&#26041;&#31243;&#24335;&#26377;&#19968;&#27425;&#35299; &#36664;&#20986;&#21253;&#21547;&#19968;&#20491;&#20803;&#32032;&#30340;&#21521;&#37327;</span>
+<span class="comment">%     &#33509;&#28858;&#20108;&#27425;&#26041;&#31243;&#24335;&#65292;&#21063;&#36664;&#20986;&#20854;&#35299;&#65288;&#21253;&#21547;&#35079;&#25976;&#35299;&#65289;</span>
+   <span class="keyword">switch</span> coef(1)
+       <span class="keyword">case</span> {0}
+           <span class="keyword">if</span>((coef(2)==0)&amp;(coef(3)~=0))
+               root=[];
+           <span class="keyword">else</span>
+               root=[-coef(3)/coef(2)];
+           <span class="keyword">end</span>
+       <span class="keyword">otherwise</span>
+           root=[coef(2) coef(2)].^2-(4*[coef(1) coef(1)].*[coef(3) coef(3)]);<span class="comment">%b^2-4ac</span>
+           root=root.^(1/2);<span class="comment">%sqrt(b^2-4ac)</span>
+           root=root.*[1 -1];<span class="comment">%+-sqrt(b^2-4ac)</span>
+           root=root-coef(2);<span class="comment">%-b+-sqrt(b^2-4ac)</span>
+           root=root/(2*coef(1));<span class="comment">%(-b+-sqrt(b^2-4ac))/2a</span>
+   <span class="keyword">end</span>
+   
+ 
+<span class="keyword">end</span>
+
+</pre><p>&#20197;&#19979;&#28858;&#28204;&#35430;&#29992;&#20989;&#24335;</p><pre class="codeinput"><span class="keyword">function</span> []=test_5()
+    fprintf(<span class="string">'Here is the demo for problem&#65306;%s .\n'</span>,<span class="string">'15-16'</span>);
+    a=[0 0 1];
+    b=[0 2 4];
+    c=[1 -2 1];
+    d=[1 -5 6];
+
+    disp(<span class="string">'&#20418;&#25976;&#65306;'</span>);
+    disp(a);
+    disp(<span class="string">'&#26681;&#28858;&#65306;'</span>);
+    disp(quadzero01(a));
+
+    disp(<span class="string">'&#20418;&#25976;&#65306;'</span>);
+    disp(b);
+    disp(<span class="string">'&#26681;&#28858;&#65306;'</span>);
+    disp(quadzero01(b));
+
+    disp(<span class="string">'&#20418;&#25976;&#65306;'</span>);
+    disp(c);
+    disp(<span class="string">'&#26681;&#28858;&#65306;'</span>);
+    disp(quadzero01(c));
+
+    disp(<span class="string">'&#20418;&#25976;&#65306;'</span>);
+    disp(d);
+    disp(<span class="string">'&#26681;&#28858;&#65306;'</span>);
+    disp(quadzero01(d));
+
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Here is the demo for problem&#65306;15-16 .
+&#20418;&#25976;&#65306;
+     0     0     1
+
+&#26681;&#28858;&#65306;
+&#20418;&#25976;&#65306;
+     0     2     4
+
+&#26681;&#28858;&#65306;
+    -2
+
+&#20418;&#25976;&#65306;
+     1    -2     1
+
+&#26681;&#28858;&#65306;
+     1     1
+
+&#20418;&#25976;&#65306;
+     1    -5     6
+
+&#26681;&#28858;&#65306;
+     3     2
+
+</pre><h2 id="7">16-9</h2><p>&#32102;&#23450;&#19968;&#21521;&#37327; A&#65292;&#35531;&#23531;&#19968;&#27573;&#31243;&#24335; useIf01.m&#65292;&#21033;&#29992; if-then-else &#25351;&#20196;&#20358;&#20381;&#20803;&#32032;&#20540;&#19981;&#21516; &#32780;&#21360;&#20986;&#19981;&#21516;&#35338;&#24687;</p><p>&#20197;&#19979;&#28858;uself01&#24314;&#31435;&#30697;&#38499;&#20989;&#24335;</p><pre class="language-matlab">
+<span class="keyword">function</span> []=uself01(index)
+<span class="comment">%     &#36664;&#20837;&#19968;&#20491;&#21521;&#37327;&#65292;&#20381;&#27425;&#21628;&#21483;&#21028;&#26039;&#20989;&#25976;judge</span>
+<span class="comment">%     &#20381;&#27425;&#21360;&#20986;&#32080;&#26524;</span>
+    <span class="keyword">for</span> k=1:length(index)
+        fprintf(<span class="string">'A(%d) = '</span>,k);
+        judge(index(k));
+    <span class="keyword">end</span>
+    
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> []=judge(number)
+<span class="comment">%     &#21028;&#26039;&#36664;&#20837;number&#28858;&#35079;&#25976;&#25110;&#26159;&#27491;&#36000;&#38646;&#65292;&#20006;&#21360;&#20986;&#20854;&#32080;&#26524;</span>
+    <span class="keyword">if</span> ~isreal(number)
+        fprintf(<span class="string">'%f+(%f)i&#26159;&#35079;&#25976;\n'</span>,real(number),imag(number));
+    <span class="keyword">else</span> <span class="keyword">if</span> (number==0)
+            fprintf(<span class="string">'%f&#26159;&#38646;\n'</span>,number);
+        <span class="keyword">else</span>
+            <span class="keyword">switch</span> (number/abs(number))
+                <span class="keyword">case</span> {1}
+                    fprintf(<span class="string">'%f&#26159;&#27491;&#25976;\n'</span>,number);
+                <span class="keyword">case</span> {-1}
+                    fprintf(<span class="string">'%f&#26159;&#36000;&#25976;\n'</span>,number);
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    
+        
+<span class="keyword">end</span>
+
+</pre><p>&#20197;&#19979;&#28858;&#28204;&#35430;&#29992;&#20989;&#24335;</p><pre class="codeinput"><span class="keyword">function</span> []=test_6()
+    fprintf(<span class="string">'Here is the demo for problem&#65306;%s .\n'</span>,<span class="string">'16-9'</span>);
+    A=randn(20,1)+(rand(20,1)&gt;0.7)*sqrt(-1);
+
+    disp(<span class="string">'&#36664;&#20837;&#28858;&#65306;'</span>);
+    disp(A);
+    disp(<span class="string">'&#36664;&#20986;&#28858;&#65306;'</span>);
+    uself01(A);
+
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Here is the demo for problem&#65306;16-9 .
+&#36664;&#20837;&#28858;&#65306;
+   1.4193 + 1.0000i
+   0.2916 + 0.0000i
+   0.1978 + 0.0000i
+   1.5877 + 0.0000i
+  -0.8045 + 0.0000i
+   0.6966 + 0.0000i
+   0.8351 + 0.0000i
+  -0.2437 + 0.0000i
+   0.2157 + 1.0000i
+  -1.1658 + 0.0000i
+  -1.1480 + 0.0000i
+   0.1049 + 0.0000i
+   0.7223 + 1.0000i
+   2.5855 + 0.0000i
+  -0.6669 + 1.0000i
+   0.1873 + 0.0000i
+  -0.0825 + 1.0000i
+  -1.9330 + 0.0000i
+  -0.4390 + 0.0000i
+  -1.7947 + 0.0000i
+
+&#36664;&#20986;&#28858;&#65306;
+A(1) = 1.419310+(1.000000)i&#26159;&#35079;&#25976;
+A(2) = 0.291584&#26159;&#27491;&#25976;
+A(3) = 0.197811&#26159;&#27491;&#25976;
+A(4) = 1.587699&#26159;&#27491;&#25976;
+A(5) = -0.804466&#26159;&#36000;&#25976;
+A(6) = 0.696624&#26159;&#27491;&#25976;
+A(7) = 0.835088&#26159;&#27491;&#25976;
+A(8) = -0.243715&#26159;&#36000;&#25976;
+A(9) = 0.215670+(1.000000)i&#26159;&#35079;&#25976;
+A(10) = -1.165844&#26159;&#36000;&#25976;
+A(11) = -1.147953&#26159;&#36000;&#25976;
+A(12) = 0.104875&#26159;&#27491;&#25976;
+A(13) = 0.722254+(1.000000)i&#26159;&#35079;&#25976;
+A(14) = 2.585491&#26159;&#27491;&#25976;
+A(15) = -0.666891+(1.000000)i&#26159;&#35079;&#25976;
+A(16) = 0.187331&#26159;&#27491;&#25976;
+A(17) = -0.082494+(1.000000)i&#26159;&#35079;&#25976;
+A(18) = -1.933023&#26159;&#36000;&#25976;
+A(19) = -0.438966&#26159;&#36000;&#25976;
+A(20) = -1.794679&#26159;&#36000;&#25976;
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Hw1 
+% 劉弘祥
+% 106022103 
+% 2018/11/26
+%%
+% 以上分別為各問題的code
+%
+% 以下為測試用程式主體：
+function []= test_code_hw1()
+    clear all;
+    test_1();
+    test_2();
+    test_3();
+    test_4();
+    test_5();
+    test_6();
+    
+end
+
+%% 9-1-4
+% 請設計一個函數 index2pos.m，其用法如下：
+% position = index2pos(index);
+% 其中 index 是一個元素為正整數的向量，position 則是此函數的輸出矩陣，
+% 其列數為 index 元素的最大值，行數則是 index 的元素個數，而且當 index(i) = j 時，
+% position 的第 i 行中，只有第 j 個元素為 1，其餘為零。
+%
+% 以下為index2pos函式
+%
+% <include>index2pos.m</include> 
+% 
+% 以下為測試用函式
+function []= test_1()
+    fprintf('Here is the demo for problem：%s .\n','9-1-4');
+    a=[2 1 3 5];    
+    b=[2 7 1 1 5];
+    
+    disp('輸入為：');
+    disp(a);
+    disp('輸出為：');
+    disp(index2pos(a));
+    
+    disp('輸入為：');
+    disp(b);
+    disp('輸出為：');
+    disp(index2pos(b));
+    
+end
+
+%% 10-2-1
+% Palindrome: 「迴文」 (Palindrome) 在中文當中是指倒正著念
+% 和反著念都相同的句子，前後對稱，例如「上海自來水來自海上」
+% 。在英文當中是指正著看和反著看都相同的單字，例如「 madam 
+% 」。請寫一個 MATLAB 函數，來決定所給定的字串是否是「迴文」。
+%
+% 以下為Palindrome回文函式
+%
+% <include>Palindrome.m</include> 
+% 
+% 
+% 以下為測試用函式
+function []=test_2()
+    fprintf('Here is the demo for problem：%s .\n','10-2-1');
+    a='madam';
+    b='homework';
+    c=[1 2 3 2 1];
+    
+    disp('輸入為：');
+    disp(a);
+    disp('輸出為：');
+    disp(Palindrome(a));
+    
+    disp('輸入為：');
+    disp(b);
+    disp('輸出為：');
+    disp(Palindrome(b));
+    
+    disp('輸入為：');
+    disp(c);
+    disp('輸出為：');
+    disp(Palindrome(c));
+    %順便測試一下Cell Arrays 是否可以判斷
+    d=[a b a];
+    disp('輸入為：');
+    disp(d);
+    disp('輸出為：');
+    disp(Palindrome(d));
+    %實際測試之後發現並不是以aba做判斷，而是合併之後判斷
+    %若需要判斷aba可能需要用重載
+    
+end
+
+%% 11-1-1
+% 請寫一個簡短的程式getMdArray.m來建立一個3維矩陣A
+%
+% 以下為getMdArray建立矩陣函式
+%
+% <include>getMdArray.m</include> 
+% 
+% 
+% 以下為測試用函式
+function []=test_3()
+    fprintf('Here is the demo for problem：%s .\n','11-1-1');
+    [data,years,type,class] = getMdArray();
+    
+    for i=1:2;
+        disp(class(i));
+        for j=1:3;
+            fprintf('\t');
+            disp(years(j));
+            for k=1:4;
+                fprintf('\t\t');
+                disp(type(k));
+                fprintf('\b\b');
+                disp(data(j,k,i));
+            end
+        end
+    end
+
+end
+
+%% 14-13
+% 請寫一個 MATLAB 程式找出最小的 正整數 n 值，使得 A^(n+1)=A^n
+% 此時n值為何
+%
+% 以下為min_value_times建立矩陣函式
+%
+% <include>min_value_times.m</include> 
+% 
+% 
+% 以下為測試用函式
+function []=test_4()
+    fprintf('Here is the demo for problem：%s .\n','14-13');
+    M=[0.3 0.1 0.2;0.2 0.7 0.4;0.5 0.2 0.4];
+    n=min_value_times(M);
+    disp('A為：');
+    format bank;
+    disp(M);
+    fprintf('最小的n值為%d.\n此時的A^n和A^n+1為\n',n);
+    format long;
+    disp(M^n);
+    format;
+    
+  
+end
+
+%% 15-16
+% 撰寫一函式 quadzero01.m，其輸出入的格式如下：
+%   root = quadzero01(coef)
+% 其中 coef 是一個 3x1 的向量，代表一個一元二次方程式的係數（降冪排列）
+% ，而 root 則是此方程式的根所形成的向量。若 coef(1) 不是零，則 roots 
+% 的長度為二。若 coef(1) 是零，則可能有一解（root 的長度為一）或無解
+% （root為空矩陣）。
+%
+% 以下為quadzero01建立矩陣函式
+%
+% <include>quadzero01.m</include> 
+% 
+% 
+% 以下為測試用函式
+function []=test_5()
+    fprintf('Here is the demo for problem：%s .\n','15-16');
+    a=[0 0 1];
+    b=[0 2 4];
+    c=[1 -2 1];
+    d=[1 -5 6];
+    
+    disp('係數：');
+    disp(a);
+    disp('根為：');
+    disp(quadzero01(a));
+    
+    disp('係數：');
+    disp(b);
+    disp('根為：');
+    disp(quadzero01(b));
+    
+    disp('係數：');
+    disp(c);
+    disp('根為：');
+    disp(quadzero01(c));
+    
+    disp('係數：');
+    disp(d);
+    disp('根為：');
+    disp(quadzero01(d));
+
+  
+end
+
+%% 16-9
+% 給定一向量 A，請寫一段程式 useIf01.m，利用 if-then-else 指令來依元素值不同 而印出不同訊息
+%
+% 以下為uself01建立矩陣函式
+%
+% <include>uself01.m</include> 
+% 
+% 
+% 以下為測試用函式
+function []=test_6()
+    fprintf('Here is the demo for problem：%s .\n','16-9');
+    A=randn(20,1)+(rand(20,1)>0.7)*sqrt(-1);
+    
+    disp('輸入為：');
+    disp(A);
+    disp('輸出為：');
+    uself01(A);
+
+  
+end
+##### SOURCE END #####
+--></body></html>
